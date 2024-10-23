@@ -4,6 +4,15 @@
 import requests
 
 def top_ten(subreddit):
+    """
+    Fetches and prints the titles of the first 10 hot posts for a given subreddit.
+    
+    Args:
+        subreddit (str): The name of the subreddit to query.
+    
+    Returns:
+        None: If the subreddit is invalid or there are no hot posts, None is printed.
+    """
     URL = "https://www.reddit.com/r/{}/hot.json?limit=10".format(subreddit)
     HEADERS = {"User-Agent": "Mozilla/5.0"}
 
